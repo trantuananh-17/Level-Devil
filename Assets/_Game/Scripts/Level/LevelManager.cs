@@ -11,6 +11,9 @@ public class LevelManager : MonoBehaviour
     public List<Map> mapList;
     public Map mapScr;
     public int curMap;
+
+    // map-level : Mỗi mapOS chứa danh sách maplist
+    // Mỗi phần tử là 1 mapdata gồm: elevel isWon, List<level> 
     public MapSO mapSO;
     public Image imgBackGround;
     public bool endAnim;
@@ -27,8 +30,8 @@ public class LevelManager : MonoBehaviour
 
     public void OnInit()
     {
-        curMap = PlayerPrefs.GetInt("CurrentMap", 0);
-        mapSO.LoadWinStates();
+        curMap = PlayerPrefs.GetInt("CurrentMap", 0); // Lấy map hiện tại
+        mapSO.LoadWinStates(); // Load trạng thái thắng
     }
 
     public void ResetWinStates()
@@ -51,10 +54,10 @@ public class LevelManager : MonoBehaviour
 
         foreach (Map map in mapList)
         {
-            if (map.id == id)
+            if (map.id == id) //Dựa vào id spawn Map tương ứng trong mapList
             {
                /* mapScr = Instantiate(mapList[curMap], transform);*/
-                mapScr = SimplePool.Spawn<Map>(mapList[id]);
+                mapScr = SimplePool.Spawn<Map>(mapList[id]); // mapScr là danh sách level (1.1, 1.2,...)
                 mapScr.ResetState();
                 curMaplList.Add(mapScr);
             }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StartScene : UICanvas
 {
     public Image image;
-    public float fillDuration = 2f; // Thời gian để thanh đầy (giây)
+    public float fillDuration = 0; // Thời gian để thanh đầy (giây)
 
     private void Start()
     {
@@ -23,7 +23,7 @@ public class StartScene : UICanvas
     {
         image.DOFillAmount(1, fillDuration).OnComplete(() =>
         {
-            UIManager.Ins.OpenUI<CursorCanvas>();
+            //UIManager.Ins.OpenUI<CursorCanvas>();
             UIManager.Ins.OpenUI<SelectMode>();
             UIManager.Ins.OpenUI<AnimCanvas>();
             UIManager.Ins.CloseUI<StartScene>();

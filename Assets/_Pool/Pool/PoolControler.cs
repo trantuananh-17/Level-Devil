@@ -16,10 +16,10 @@ public class PoolControler : MonoBehaviour
 
     [Space]
     [Header("Pool")]
-    public List<PoolAmount> Pool;
+    public List<PoolAmount> Pool; //Danh sách các đối tượng tạo sẵn
 
     [Header("Particle")]
-    public ParticleAmount[] Particle;
+    public ParticleAmount[] Particle; // Danh sách các hiệu hứng 
 
 
     public void Awake()
@@ -53,7 +53,7 @@ public class PoolControlerEditor : Editor
     {
         base.OnInspectorGUI();
 
-        if (GUILayout.Button("Create Quick Root"))
+        if (GUILayout.Button("Create Quick Root")) // Tạo GameObject root nếu chưa có.
         {
             for (int i = 0; i < pool.Pool.Count; i++)
             {
@@ -76,9 +76,10 @@ public class PoolControlerEditor : Editor
             }
         }
 
-        if (GUILayout.Button("Get Prefab Resource"))
+        if (GUILayout.Button("Get Prefab Resource")) 
         {
-            GameUnit[] resources = Resources.LoadAll<GameUnit>("Pool");
+            // TỰ động tìm trong resources/pool và thêm vào danh sách pool nếu chưa có.
+            GameUnit[] resources = Resources.LoadAll<GameUnit>("Pool"); 
 
             for (int i = 0; i < resources.Length; i++)
             {
@@ -136,6 +137,8 @@ public class ParticleAmount
 }
 
 
+
+// Phân loại và gọi hiệu ứng theo loại.
 public enum ParticleType
 {
     Hit,
@@ -143,6 +146,7 @@ public enum ParticleType
     CoinEff
 }
 
+// Xác định loại object nào dành cho level nào → phục vụ spawn cho từng level cụ thể.
 public enum PoolType
 {
     None,

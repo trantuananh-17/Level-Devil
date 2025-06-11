@@ -4472,7 +4472,6 @@ MonoBehaviour:
   moveType: 0
   boxCollider2D: {fileID: 168963010043303538}
   isTouching: 0
-  flag: 0
 --- !u!61 &168963010043303538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9671,7 +9670,6 @@ MonoBehaviour:
   moveType: 0
   boxCollider2D: {fileID: 5673444840334975592}
   isTouching: 0
-  flag: 0
 --- !u!61 &5673444840334975592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13020,7 +13018,6 @@ MonoBehaviour:
   moveType: 0
   boxCollider2D: {fileID: 3141723608433541085}
   isTouching: 0
-  flag: 0
 --- !u!1 &6270204883572666463
 GameObject:
   m_ObjectHideFlags: 0
@@ -16613,7 +16610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178cb4b815e994a4c83b012d25880261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 1
+  poolType: 0
   id: 5
 --- !u!1 &8450085229365025737
 GameObject:

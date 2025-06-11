@@ -213,7 +213,7 @@ Canvas:
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 3
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
 --- !u!114 &2266229614496656869
 MonoBehaviour:
   m_ObjectHideFlags: 0

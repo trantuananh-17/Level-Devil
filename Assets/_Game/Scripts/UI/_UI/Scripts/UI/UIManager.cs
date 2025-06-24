@@ -1,18 +1,4 @@
-///
-/// Create by linh soi - Abi Game studio
-/// mentor Minh tito - CTO Abi Game studio
-/// 
-/// Manage list UI canvas for easy to use
-/// Member nen inherit UI canvas
-/// 
-/// Update: 09-10-2020 
-///             manage UI with Generic
-///         09-10-2021 
-///             Open, Close UI with Typeof(T)
-///         28/11/2022
-///             Close All UI
-///             Close delay time
-///
+
 
 using System.Collections;
 using System.Collections.Generic;
@@ -21,8 +7,6 @@ using UnityEngine.Events;
 
 public class UIManager : Singleton<UIManager>
 {
-    //dict for quick query UI prefab
-    //dict dung de lu thong tin prefab canvas truy cap cho nhanh
     private Dictionary<System.Type, UICanvas> uiCanvasPrefab = new Dictionary<System.Type, UICanvas>();
 
     //list from resource
